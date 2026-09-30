@@ -14,15 +14,7 @@ import java.nio.charset.CharsetEncoder;
 import java.nio.charset.CodingErrorAction;
 import java.nio.charset.StandardCharsets;
 
-/**
- * ADAPTER: makes the vendor's DotMatrixDriver usable as a LabelPrinter.
- *
- * Translates:
- *  - input:   RenderedLabel + int copies  ->  ASCII byte[] + short copyCount, with open()/close() lifecycle
- *  - output:  int status codes and DotMatrixLinkException  ->  PrintFailedException(Reason)
- *
- * This is the only class that knows the vendor's constants and exception type.
- */
+
 public class DotMatrixPrinterAdapter implements LabelPrinter {
     private static final String DEVICE_NAME = "dot-matrix";
     private final DotMatrixDriver driver;
@@ -71,7 +63,6 @@ public class DotMatrixPrinterAdapter implements LabelPrinter {
         };
     }
 
-    /** The vendor device understands plain ASCII only; anything else is an invalid label for it. */
     private static byte[] toAscii(RenderedLabel label) {
         StringBuilder text = new StringBuilder(label.title()).append("\r\n");
         for (String line : label.lines()) {

@@ -6,13 +6,11 @@ import lab.printing.RenderedLabel;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
-/** Refined abstraction #2: label for a reagent bottle; adds a hazard line when needed. */
 public class ReagentLabel extends Label {
     private final String name;
     private final String lotNumber;
     private final LocalDate expiresOn;
-    private final String hazardNote; // may be null
+    private final String hazardNote;
 
     public ReagentLabel(LabelPrinter printer, String name, String lotNumber, LocalDate expiresOn, String hazardNote) {
         super(printer);

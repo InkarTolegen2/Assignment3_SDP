@@ -1,9 +1,5 @@
 package lab.printing;
 
-/**
- * The ONLY failure type of the LabelPrinter contract.
- * Every implementation (including adapted ones) reports problems as this exception + a Reason.
- */
 public class PrintFailedException extends RuntimeException {
 
     public enum Reason {

@@ -2,7 +2,6 @@ package lab.printing;
 
 import java.util.function.Consumer;
 
-/** Concrete implementor #1: thermal printer speaking ZPL. Output goes to a sink (socket, stdout, ...). */
 public class ThermalZplPrinter implements LabelPrinter {
     private final Consumer<String> sink;
 
@@ -30,7 +29,6 @@ public class ThermalZplPrinter implements LabelPrinter {
         return new PrintReceipt(copies, "thermal-zpl");
     }
 
-    /** ^ and ~ are ZPL control characters. */
     private static String clean(String s) {
         return s.replace('^', ' ').replace('~', ' ');
     }

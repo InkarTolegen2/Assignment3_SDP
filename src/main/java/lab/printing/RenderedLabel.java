@@ -3,7 +3,6 @@ package lab.printing;
 import java.util.List;
 import java.util.Objects;
 
-/** Printer-independent content of one label. */
 public record RenderedLabel(String title, List<String> lines, String barcode) {
     public RenderedLabel {
         Objects.requireNonNull(title, "title");

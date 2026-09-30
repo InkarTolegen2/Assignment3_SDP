@@ -6,11 +6,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-/**
- * Chooses the LabelPrinter at runtime from the destination string itself (its URI scheme).
- * Knows only the LabelPrinter interface; concrete printers are registered from outside,
- * so adding a new implementor never requires editing this class (Open/Closed).
- */
 public class PrinterResolver {
     private final Map<String, Function<URI, LabelPrinter>> factories = new HashMap<>();
 

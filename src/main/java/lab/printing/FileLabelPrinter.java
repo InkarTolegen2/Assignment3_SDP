@@ -6,7 +6,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 
-/** Concrete implementor #2: appends a plain-text label sheet to a file (handy for previews and archives). */
 public class FileLabelPrinter implements LabelPrinter {
     private final Path file;
 

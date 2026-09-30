@@ -9,7 +9,6 @@ import java.util.List;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-/** Open/Closed on the ABSTRACTION axis: a brand-new label type needs zero changes to existing classes. */
 class NewLabelVariantTest {
 
     static class FreezerBoxLabel extends Label {

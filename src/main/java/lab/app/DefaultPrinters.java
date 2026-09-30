@@ -8,7 +8,6 @@ import vendor.dotmatrix.DotMatrixDriver;
 
 import java.nio.file.Path;
 
-/** Composition root: the only place that knows which concrete printers exist. */
 public final class DefaultPrinters {
     private DefaultPrinters() {
     }

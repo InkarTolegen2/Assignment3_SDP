@@ -11,11 +11,7 @@ import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.List;
 
-/**
- * Demo client. It picks WHAT to print (label types) and receives WHERE from the input strings;
- * it never names a concrete printer class.
- * Usage: java -cp target/classes lab.app.Main [destination ...]
- */
+
 public class Main {
     public static void main(String[] args) {
         PrinterResolver resolver = DefaultPrinters.create();

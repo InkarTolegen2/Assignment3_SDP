@@ -2,18 +2,6 @@ package vendor.dotmatrix;
 
 import java.nio.charset.StandardCharsets;
 
-/**
- * Simulated third-party driver for an old dot-matrix printer (ADAPTEE).
- * Treat it as vendor code: it must NOT be modified to fit our system.
- *
- * Differences from our LabelPrinter contract:
- *  - method is emit(short copyCount, byte[] payload) - other name, other parameter order/types
- *  - takes raw ASCII bytes, not a structured label
- *  - failures are negative int codes (in-band), plus a checked DotMatrixLinkException from open()
- *  - explicit open()/close() lifecycle
- *
- * Simulation rules (port name suffix): -DEAD -> open() fails, -BUSY -> code -11, -NOPAPER -> code -23.
- */
 public class DotMatrixDriver {
     public static final int OK = 0;
     public static final int ERR_NOT_OPEN = -1;
