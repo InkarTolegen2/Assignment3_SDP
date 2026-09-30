@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lab Label Printing - Bridge + Adapter (Java 17, Maven)
 
 Assignment 3: Adapter and Bridge patterns.
@@ -20,3 +21,6 @@ Destination suffixes for the simulated dot-matrix port: `-BUSY`, `-NOPAPER`, `-D
 - `vendor.dotmatrix` - simulated third-party driver (adaptee, not modified)
 - `lab.app` - composition root and demo
 - `docs/uml-class-diagram.(svg|png)`, `docs/rationale.md`
+=======
+# Assignment3_SDP
+>>>>>>> 5075ec4c2160e46df814bb0917eae641f2638053
